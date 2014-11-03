@@ -1,0 +1,57 @@
+RELEASETYPE=LOCAL
+_ISVINCPATH=$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;
+TARGETNAME=sabre_audio_with_xaml
+
+FILE_VIEW_ROOT_FOLDER= \
+    ReadMe.txt \
+    StdAfx.cpp \
+    prelink.bat \
+    postlink.bat \
+
+FILE_VIEW_RESOURCE_FOLDER= \
+    ..\..\..\..\Users\silvia\Documents\Visual Studio 2013\Projects\xaml_audio\xaml_audio\App.xaml \
+    ..\..\..\..\Users\silvia\Documents\Visual Studio 2013\Projects\xaml_audio\xaml_audio\MainPage.xaml \
+    sabre_audio_with_xaml.xrpack \
+    sabre_audio_with_xamlGenerated.rc2 \
+
+FILE_VIEW_INCLUDES_FOLDER= \
+    App.h \
+    MainPage.h \
+    resource.h \
+    sabre_audio_with_xamlGenerated.h \
+    StdAfx.h \
+
+SOURCES= \
+    App.cpp \
+    MainPage.cpp \
+    WinMain.cpp \
+    sabre_audio_with_xaml.rc
+
+TARGETLIBS= \
+    $(SG_OUTPUT_ROOT)\sdk\lib\$(_CPUINDPATH)\coredll.lib \
+    $(SG_OUTPUT_ROOT)\sdk\lib\$(_CPUINDPATH)\xamlruntime.lib \
+    $(SG_OUTPUT_ROOT)\sdk\lib\$(_CPUINDPATH)\interactivity.lib \
+
+PRECOMPILED_PCH=StdAfx.pch
+PRECOMPILED_CXX=1
+PRECOMPILED_OBJ=StdAfx.obj
+PRECOMPILED_INCLUDE=StdAfx.h
+TARGETTYPE=PROGRAM
+POSTLINK_PASS_CMD=postlink.bat
+PRELINK_PASS_CMD=prelink.bat
+
+FILE_VIEW_PARAMETER_FOLDER= \
+    sabre_audio_with_xaml.bib \
+    sabre_audio_with_xaml.reg \
+    sabre_audio_with_xaml.dat \
+    sabre_audio_with_xaml.db \
+    ProjSysgen.bat \
+
+INCLUDES= \
+    $(MAKEDIR) \
+
+XRPACK_ARGS= \
+    /Root=$(MAKEDIR) \
+    /IntermediateFiles=$(_OBJDIR)\xrpack\baml \
+    @$(MAKEDIR)\sabre_audio_with_xaml.xrpack \

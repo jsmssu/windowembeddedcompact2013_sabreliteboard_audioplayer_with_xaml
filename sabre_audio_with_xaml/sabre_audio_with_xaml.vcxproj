@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <!--
+        <ProjectConfiguration Include="Debug|__SDK_NAME">
+            <Configuration>Debug</Configuration>
+            <Platform>__SDK_NAME</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|__SDK_NAME">
+            <Configuration>Release</Configuration>
+            <Platform>__SDK_NAME</Platform>
+        </ProjectConfiguration>
+        //-->
+    <ProjectConfiguration Include="Debug|MS2013">
+      <Configuration>Debug</Configuration>
+      <Platform>MS2013</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|MS2013">
+      <Configuration>Release</Configuration>
+      <Platform>MS2013</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{c68c997c-d040-405a-863b-91bb23bf991a}</ProjectGuid>
+    <RootNamespace>sabre_audio_with_xaml</RootNamespace>
+    <!-- <ProjectGuid>__PROJECT_GUID</ProjectGuid> //-->
+    <!-- <RootNamespace>__APPLICATION_NAME</RootNamespace> //-->
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and '$(VisualStudioVersion)' == ''">$(VCTargetsPath11)</VCTargetsPath>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <EnableRedirectPlatform>true</EnableRedirectPlatform>
+    <RedirectPlatformValue>MS2013</RedirectPlatformValue>
+    <PlatformToolset>CE800</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|MS2013'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <!-- this is used to distinguish Debug/Relese configuration //-->
+    <PlatformToolset>CE800</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|MS2013'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>CE800</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="XRPack.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|MS2013'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <!-- this is used to distinguish Debug/Relese configuration //-->
+      <PreprocessorDefinitions>_WIN32_WCE=$(CEVER);UNDER_CE;WINCE;_UNICODE;UNICODE;_DEBUG;_WINDOWS;_DEBUG;WINDOES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/D "DEBUG" /D "STANDARDSHELL_UI_MODEL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <AdditionalDependencies>interactivity.lib;xamlruntime.lib;commctrl.lib;coredll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWSCE,"8.00" %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UNDER_CE;_UNICODE;UNICODE;_DEBUG;_WINDOWS;_DEBUG;WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/D "DEBUG" /D "STANDARDSHELL_UI_MODEL" %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|MS2013'">
+    <ClCompile>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>NDEBUG;_WIN32_WCE=$(CEVER);UNDER_CE;WINCE;_UNICODE;UNICODE;_WINDOWS;WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/D "STANDARDSHELL_UI_MODEL" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>interactivity.lib;xamlruntime.lib;commctrl.lib;coredll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWSCE,"8.00" %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;UNDER_CE;_UNICODE;UNICODE;_WINDOWS;WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <!-- <ClInclude Include="__CL_INCLUDE.H" /> //-->
+    <ClInclude Include="App.h" />
+    <ClInclude Include="MainPage.h" />
+    <ClInclude Include="OpenFileDialog.h" />
+    <ClInclude Include="SilviaAudioPlayer.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="sabre_audio_with_xamlGenerated.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- <ClCompile Include="__CL_COMPILE.CPP" /> //-->
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="MainPage.cpp" />
+    <ClCompile Include="OpenFileDialog.cpp" />
+    <ClCompile Include="SilviaAudioPlayer.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- <ResourceCompile Include="__RESOURCE_COMPILE.RC" /> //-->
+    <ResourceCompile Include="sabre_audio_with_xaml.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- <XRPack_Tool Include="__APP.XRPACK" /> //-->
+    <XRPack_Tool Include="sabre_audio_with_xaml.xrpack" />
+  </ItemGroup>
+  <ItemGroup Label="image_file">
+    <!-- <Image Include="__IMAGE.ICO" /> //-->
+  </ItemGroup>
+  <ItemGroup>
+    <!-- <None Include="xxx.xxx" /> //-->
+    <None Include="..\..\..\..\Users\silvia\Documents\Visual Studio 2013\Projects\xaml_audio\xaml_audio\App.xaml" />
+    <None Include="..\..\..\..\Users\silvia\Documents\Visual Studio 2013\Projects\xaml_audio\xaml_audio\MainPage.xaml" />
+    <None Include="XRPack.props" />
+    <None Include="XRPack.targets" />
+    <None Include="XRPack.xml" />
+    <None Include="sabre_audio_with_xamlGenerated.rc2" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="XRPack.targets" />
+  </ImportGroup>
+</Project>

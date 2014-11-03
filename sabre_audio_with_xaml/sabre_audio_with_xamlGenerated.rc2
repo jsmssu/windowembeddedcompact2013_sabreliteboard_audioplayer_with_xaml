@@ -1,0 +1,11 @@
+//------------------------------------------------------------------------
+// XRPack version 8.00.1266
+// Generated file: Do not edit.
+//
+
+#include <sabre_audio_with_xamlGenerated.h>
+
+IDR_XAML_AUDIO_APP      SLWE_XAML DISCARDABLE "..\\MS2013\\Debug\\App.Compressed"
+IDR_XAML_AUDIO_MAINPAGE SLWE_XAML DISCARDABLE "..\\MS2013\\Debug\\MainPage.Compressed"
+                                                                                      
+

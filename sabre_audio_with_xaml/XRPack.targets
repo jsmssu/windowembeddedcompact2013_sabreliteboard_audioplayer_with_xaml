@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <PropertyPageSchema
+      Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml" />
+    <AvailableItemName
+      Include="XRPack_Tool">
+      <Targets>_XRPack_Tool</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <UsingTask
+    TaskName="XRPack_Tool"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <Target
+    Name="_XRPack_Tool"
+    BeforeTargets="$(XRPack_ToolBeforeTargets)"
+    AfterTargets="$(XRPack_ToolAfterTargets)"
+    Condition="'@(XRPack_Tool)' != ''"
+    DependsOnTargets="$(XRPack_ToolDependsOn);ComputeXRPack_ToolOutput"
+    Outputs="%(XRPack_Tool.Outputs)"
+    Inputs="%(XRPack_Tool.Identity);%(XRPack_Tool.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <XRPack_Tool
+        Remove="@(XRPack_Tool)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <XRPack_Tool_tlog
+        Include="%(XRPack_Tool.Outputs)"
+        Condition="'%(XRPack_Tool.Outputs)' != '' and '%(XRPack_Tool.ExcludedFromBuild)' != 'true'">
+        <Source>@(XRPack_Tool, '|')</Source>
+      </XRPack_Tool_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(XRPack_Tool.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(XRPack_Tool_tlog)' != '' and '%(XRPack_Tool_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(TLogLocation)$(ProjectName).write.1.tlog"
+      Lines="^%(XRPack_Tool_tlog.Source);@(XRPack_Tool_tlog-&gt;'%(Fullpath)')" />
+    <XRPack_Tool
+      Condition="'@(XRPack_Tool)' != '' and '%(XRPack_Tool.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(XRPack_Tool.CommandLineTemplate)"
+      AdditionalOptions="%(XRPack_Tool.AdditionalOptions)"
+      Inputs="%(XRPack_Tool.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeXRPack_ToolOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeXRPack_ToolOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeXRPack_ToolOutput"
+    Condition="'@(XRPack_Tool)' != ''">
+    <ItemGroup>
+      <XRPack_ToolDirsToMake
+        Condition="'@(XRPack_Tool)' != '' and '%(XRPack_Tool.ExcludedFromBuild)' != 'true'"
+        Include="%(XRPack_Tool.Outputs)" />
+      <Link
+        Include="%(XRPack_ToolDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(XRPack_ToolDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(XRPack_ToolDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(XRPack_ToolDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+</Project>

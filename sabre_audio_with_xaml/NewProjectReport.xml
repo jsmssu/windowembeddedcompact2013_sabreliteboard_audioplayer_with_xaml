@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='#style1'?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xrt="xrt">
+  <xrt:VCProject Name="sabre_audio_with_xaml.vcxproj" Date="2014년 11월 3일 월요일" Time="오전 11:17">
+    <SourceProject Name="xaml_audio.csproj" ProjectDirectory="C:\Users\silvia\Documents\Visual Studio 2013\Projects\xaml_audio\xaml_audio" />
+    <Preconditions NoErrorsReported="false" Name="xaml_audio.csproj">
+      <FileNameErrors>
+        <InvalidFileName FileName="..\..\..\..\Users\silvia\Documents\Visual Studio 2013\Projects\xaml_audio\xaml_audio\App.xaml" Description="The file path &quot;..\..\..\..\Users\silvia\Documents\Visual Studio 2013\Projects\xaml_audio\xaml_audio\App.xaml&quot; contains a character which will not work with Platform Builder: &quot; &quot;" />
+        <InvalidFileName FileName="..\..\..\..\Users\silvia\Documents\Visual Studio 2013\Projects\xaml_audio\xaml_audio\MainPage.xaml" Description="The file path &quot;..\..\..\..\Users\silvia\Documents\Visual Studio 2013\Projects\xaml_audio\xaml_audio\MainPage.xaml&quot; contains a character which will not work with Platform Builder: &quot; &quot;" />
+        <InvalidFileName FileName="..\..\..\..\Users\silvia\Documents\Visual Studio 2013\Projects\xaml_audio\xaml_audio\xaml_audio.csproj" Description="The file path &quot;..\..\..\..\Users\silvia\Documents\Visual Studio 2013\Projects\xaml_audio\xaml_audio\xaml_audio.csproj&quot; contains a character which will not work with Platform Builder: &quot; &quot;" />
+      </FileNameErrors>
+      <XamlFile FileName="App.xaml" HasErrors="false" OverloadedEventHandlerCount="0" Namespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" UserControl="false" MediaElementCount="0" EffectControlsCount="0">
+        <MediaElement Count="0" />
+        <DataBindingElement Count="0" />
+        <BindingMarkup Count="0" />
+        <DataContext Count="0" />
+        <DisplayMemberPath Count="0" />
+      </XamlFile>
+      <XamlFile FileName="MainPage.xaml" HasErrors="false" OverloadedEventHandlerCount="0" Namespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" UserControl="true" MediaElementCount="0" EffectControlsCount="0">
+        <MediaElement Count="0" />
+        <DataBindingElement Count="0" />
+        <BindingMarkup Count="0" />
+        <DataContext Count="0" />
+        <DisplayMemberPath Count="0" />
+      </XamlFile>
+      <UserControl Count="1" />
+      <UnknownNamespace Count="0" />
+      <MediaElement Count="0" />
+      <UnknownControl Count="0" />
+      <EffectControl Count="0" />
+      <UnsupportedDataBindingElement Count="0" />
+      <UnsupportedBindingMarkup Count="0" />
+      <UnsupportedDataContext Count="0" />
+      <UnsupportedDisplayMemberPath Count="0" />
+      <FileNameError Count="3" />
+      <MissingXClass Count="0" />
+      <OverloadedEventHandler Count="0" />
+    </Preconditions>
+    <Files>
+      <Added>
+        <File FileName="App.h" />
+        <File FileName="App.cpp" />
+        <File FileName="MainPage.cpp" />
+        <File FileName="MainPage.h" />
+        <File FileName="postlink.bat" />
+        <File FileName="prelink.bat" />
+        <File FileName="sabre_audio_with_xaml.bib" />
+        <File FileName="sabre_audio_with_xaml.dat" />
+        <File FileName="sabre_audio_with_xaml.db" />
+        <File FileName="sabre_audio_with_xaml.reg" />
+        <File FileName="ProjSysgen.bat" />
+        <File FileName="sabre_audio_with_xaml.pbpxml" />
+        <File FileName="XRPack.props" />
+        <File FileName="XRPack.targets" />
+        <File FileName="XRPack.xml" />
+        <File FileName="StdAfx.h" />
+        <File FileName="StdAfx.cpp" />
+        <File FileName="WinMain.cpp" />
+        <File FileName="sabre_audio_with_xamlGenerated.h" />
+        <File FileName="sabre_audio_with_xamlGenerated.rc2" />
+        <File FileName="sabre_audio_with_xaml.xrpack" />
+        <File FileName="ReadMe.txt" />
+        <File FileName="sabre_audio_with_xaml.rc" />
+        <File FileName="resource.h" />
+        <File FileName="makefile" />
+        <File FileName="sources" />
+        <File FileName="App.xaml" />
+        <File FileName="MainPage.xaml" />
+      </Added>
+      <Missing />
+      <Updated />
+    </Files>
+    <Statistics>
+      <FileStatistics FileName="App.xaml">
+        <ElementStatistic Name="Application" Count="1" />
+        <ElementStatistic Name="Application.Resources" Count="1" />
+      </FileStatistics>
+      <FileStatistics FileName="MainPage.xaml">
+        <ElementStatistic Name="Button" Count="7" />
+        <ElementStatistic Name="Grid" Count="1" />
+        <ElementStatistic Name="ListBox" Count="1" />
+        <ElementStatistic Name="ProgressBar" Count="1" />
+        <ElementStatistic Name="UserControl" Count="1" />
+      </FileStatistics>
+      <ProjectSummaryStatistics FileName="xaml_audio.csproj">
+        <ElementSummaryStatistic Name="Application" Count="1" />
+        <ElementSummaryStatistic Name="Application.Resources" Count="1" />
+        <ElementSummaryStatistic Name="Button" Count="7" />
+        <ElementSummaryStatistic Name="Grid" Count="1" />
+        <ElementSummaryStatistic Name="ListBox" Count="1" />
+        <ElementSummaryStatistic Name="ProgressBar" Count="1" />
+        <ElementSummaryStatistic Name="UserControl" Count="1" />
+      </ProjectSummaryStatistics>
+      <Paths Count="0" />
+      <Fonts Count="0" />
+    </Statistics>
+  </xrt:VCProject>
+  <xsl:variable name="project" select="document(&quot;&quot;)//xrt:VCProject" />
+  <xsl:template match="/">
+    <html>
+      <head>
+        <title>
+          <xsl:value-of select="$project/SourceProject/@Name" /> - Summary Report Change Log</title>
+      </head>
+      <style>
+        BODY
+        {
+        BACKGROUND-COLOR: white;
+        FONT-FAMILY: "Verdana", sans-serif;
+        FONT-SIZE: 100%;
+        MARGIN-LEFT: 0px;
+        MARGIN-TOP: 0px
+        }
+        P
+        {
+        FONT-FAMILY: "Verdana", sans-serif;
+        FONT-SIZE: 70%;
+        LINE-HEIGHT: 12pt;
+        MARGIN-BOTTOM: 0px;
+        MARGIN-LEFT: 10px;
+        MARGIN-TOP: 10px
+        }
+        .note
+        {
+        BACKGROUND-COLOR:  #ffffff;
+        COLOR: #336699;
+        FONT-FAMILY: "Verdana", sans-serif;
+        FONT-SIZE: 100%;
+        MARGIN-BOTTOM: 0px;
+        MARGIN-LEFT: 0px;
+        MARGIN-TOP: 0px;
+        PADDING-RIGHT: 10px
+        }
+        .infotable
+        {
+        BACKGROUND-COLOR: #f0f0e0;
+        BORDER-BOTTOM: #ffffff 0px solid;
+        BORDER-COLLAPSE: collapse;
+        BORDER-LEFT: #ffffff 0px solid;
+        BORDER-RIGHT: #ffffff 0px solid;
+        BORDER-TOP: #ffffff 0px solid;
+        FONT-SIZE: 70%;
+        MARGIN-LEFT: 10px
+        }
+        .issuetable
+        {
+        BACKGROUND-COLOR: #ffffe8;
+        BORDER-COLLAPSE: collapse;
+        COLOR: #000000;
+        FONT-SIZE: 100%;
+        MARGIN-BOTTOM: 10px;
+        MARGIN-LEFT: 13px;
+        MARGIN-TOP: 0px
+        }
+        .issuetitle
+        {
+        BACKGROUND-COLOR: #ffffff;
+        BORDER-BOTTOM: #dcdcdc 1px solid;
+        BORDER-TOP: #dcdcdc 1px;
+        COLOR: #003366;
+        FONT-WEIGHT: normal
+        }
+        .header
+        {
+        BACKGROUND-COLOR: #cecf9c;
+        BORDER-BOTTOM: #ffffff 1px solid;
+        BORDER-LEFT: #ffffff 1px solid;
+        BORDER-RIGHT: #ffffff 1px solid;
+        BORDER-TOP: #ffffff 1px solid;
+        COLOR: #000000;
+        FONT-WEIGHT: bold
+        }
+        .issuehdr
+        {
+        BACKGROUND-COLOR: #E0EBF5;
+        BORDER-BOTTOM: #dcdcdc 1px solid;
+        BORDER-TOP: #dcdcdc 1px solid;
+        COLOR: #000000;
+        FONT-WEIGHT: normal
+        }
+        .issuenone
+        {
+        BACKGROUND-COLOR: #ffffff;
+        BORDER-BOTTOM: 0px;
+        BORDER-LEFT: 0px;
+        BORDER-RIGHT: 0px;
+        BORDER-TOP: 0px;
+        COLOR: #000000;
+        FONT-WEIGHT: normal
+        }
+        .content
+        {
+        BACKGROUND-COLOR: #e7e7ce;
+        BORDER-BOTTOM: #ffffff 1px solid;
+        BORDER-LEFT: #ffffff 1px solid;
+        BORDER-RIGHT: #ffffff 1px solid;
+        BORDER-TOP: #ffffff 1px solid;
+        PADDING-LEFT: 3px
+        }
+        .issuecontent
+        {
+        BACKGROUND-COLOR: #ffffff;
+        BORDER-BOTTOM: #dcdcdc 1px solid;
+        BORDER-TOP: #dcdcdc 1px solid;
+        PADDING-LEFT: 3px
+        }
+        A:link
+        {
+        COLOR: #cc6633;
+        TEXT-DECORATION: underline
+        }
+        A:visited
+        {
+        COLOR: #cc6633;
+        }
+        A:active
+        {
+        COLOR: #cc6633;
+        }
+        A:hover
+        {
+        COLOR: #cc3300;
+        TEXT-DECORATION: underline
+        }
+        H1
+        {
+        BACKGROUND-COLOR: #003366;
+        BORDER-BOTTOM: #336699 6px solid;
+        COLOR: #ffffff;
+        FONT-SIZE: 130%;
+        FONT-WEIGHT: normal;
+        MARGIN: 0em 0em 0em -20px;
+        PADDING-BOTTOM: 8px;
+        PADDING-LEFT: 30px;
+        PADDING-TOP: 16px
+        }
+        H2
+        {
+        COLOR: #000000;
+        FONT-SIZE: 80%;
+        FONT-WEIGHT: bold;
+        MARGIN-BOTTOM: 3px;
+        MARGIN-LEFT: 10px;
+        MARGIN-TOP: 20px;
+        PADDING-LEFT: 0px
+        }
+        H3
+        {
+        COLOR: #000000;
+        FONT-SIZE: 80%;
+        FONT-WEIGHT: bold;
+        MARGIN-BOTTOM: -5px;
+        MARGIN-LEFT: 10px;
+        MARGIN-TOP: 20px
+        }
+        H4
+        {
+        COLOR: #000000;
+        FONT-SIZE: 70%;
+        FONT-WEIGHT: bold;
+        MARGIN-BOTTOM: 0px;
+        MARGIN-TOP: 15px;
+        PADDING-BOTTOM: 0px
+        }
+        UL
+        {
+        COLOR: #000000;
+        LIST-STYLE: square;
+        MARGIN-BOTTOM: 0pt;
+        MARGIN-TOP: 0pt
+        }
+        OL
+        {
+        COLOR: #000000;
+        FONT-SIZE: 70%;
+        LIST-STYLE: square;
+        MARGIN-BOTTOM: 0pt;
+        MARGIN-TOP: 0pt
+        }
+        LI
+        {
+        LIST-STYLE: square;
+        MARGIN-LEFT: 0px
+        }
+        .expandable
+        {
+        CURSOR: hand
+        }
+        .expanded
+        {
+        color: black
+        }
+        .collapsed
+        {
+        DISPLAY: none
+        }
+        .foot
+        {
+        BACKGROUND-COLOR: #ffffff;
+        BORDER-BOTTOM: #cecf9c 1px solid;
+        BORDER-TOP: #cecf9c 2px solid
+        }
+        .settings
+        {
+        MARGIN-LEFT: 25PX;
+        }
+        .help
+        {
+        TEXT-ALIGN: right;
+        margin-right: 10px;
+        }
+        .numbercontent
+        {
+        BACKGROUND-COLOR: #e7e7ce;
+        BORDER-BOTTOM: #ffffff 1px solid;
+        BORDER-LEFT: #ffffff 1px solid;
+        BORDER-RIGHT: #ffffff 1px solid;
+        BORDER-TOP: #ffffff 1px solid;
+        PADDING-LEFT: 3px
+        padding-right: 5px;
+        width: 75px;
+        }
+
+      </style>
+      <body>
+        <div id="NewXaml">
+          <h1>Summary Report - <xsl:value-of select="$project/SourceProject/@Name" /></h1>
+          <p>
+            <span class="note">
+              <b _locID="TimeOfConversion">Time of Project Generation:</b>
+              <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;</xsl:text>
+              <xsl:value-of select="$project/@Date" />
+              <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;</xsl:text>
+              <xsl:value-of select="$project/@Time" />
+              <br />
+            </span>
+          </p>
+          <h2>Platform Builder Subproject:</h2>
+          <table cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
+            <tr class="row">
+              <td class="header">
+                This project includes a Platform Builder Subproject file.
+              </td>
+            </tr>
+            <tr class="row">
+              <td class="content">
+                To add this project to your OS Design, right-click on the <B>Subprojects</B> folder and choose <B>Add Existing Subproject...</B></td>
+            </tr>
+          </table>
+          <xsl:if test="$project/Preconditions/@NoErrorsReported = 'true'">
+            <h2>No Errors Reported</h2>
+          </xsl:if>
+          <xsl:if test="count($project/Files/Added/File)&gt;0">
+            <h2>Files Added:</h2>
+            <table cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
+              <tr>
+                <td nowrap="1" class="header">Filename</td>
+              </tr>
+              <xsl:for-each select="$project/Files/Added/File">
+                <xsl:sort select="@FileName" />
+                <tr class="row">
+                  <td class="content">
+                    <xsl:value-of select="@FileName" />
+                  </td>
+                </tr>
+              </xsl:for-each>
+            </table>
+          </xsl:if>
+          <xsl:if test="count($project/Files/Updated/File)&gt;0">
+            <h2>Files Updated:</h2>
+            <table cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
+              <tr>
+                <td nowrap="1" class="header">Filename</td>
+              </tr>
+              <xsl:for-each select="$project/Files/Updated/File">
+                <xsl:sort select="@FileName" />
+                <tr class="row">
+                  <td class="content">
+                    <xsl:value-of select="@FileName" />
+                  </td>
+                </tr>
+              </xsl:for-each>
+            </table>
+          </xsl:if>
+          <xsl:if test="count($project/Files/Missing/File)&gt;0">
+            <h2>Missing Files:  These files could not be found in the referenced project.</h2>
+            <table cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
+              <tr>
+                <td nowrap="1" class="header">Filename</td>
+              </tr>
+              <xsl:for-each select="$project/Files/Missing/File">
+                <xsl:sort select="@FileName" />
+                <tr class="row">
+                  <td class="content">
+                    <xsl:value-of select="@FileName" />
+                  </td>
+                </tr>
+              </xsl:for-each>
+            </table>
+          </xsl:if>
+          <xsl:if test="$project/Preconditions/@NoErrorsReported = 'false'">
+            <h2>Validation Summary</h2>
+            <table cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
+              <tr>
+                <td nowrap="1" class="header">Summary item</td>
+              </tr>
+              <xsl:if test="$project/Preconditions/UnknownNamespace/@Count &gt; 0">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Warning: </xsl:text>
+                    </b>
+                    <xsl:text> Required namespace missing.  The controls need to use the correct namespace.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="$project/Preconditions/UserControl/@Count = 0">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Error: </xsl:text>
+                    </b>
+                    <xsl:text> UserControl missing.  The startup control must be a UserControl.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="$project/Preconditions/AppXaml/@Found = 'False'">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Error: </xsl:text>
+                    </b>
+                    <xsl:text> App.xaml missing.  An application project must contain an App.xaml file.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="$project/Preconditions/MediaElement/@Count &gt; 0">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Warning: </xsl:text>
+                    </b>
+                    <xsl:value-of select="$project/Preconditions/MediaElement/@Count" />
+                    <xsl:text> MediaElements detected. MediaElements are not supported by this version of XAML for Windows Embedded.  The generated project may not build or run.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="$project/Preconditions/EffectControl/@Count &gt; 0">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Warning: </xsl:text>
+                    </b>
+                    <xsl:value-of select="$project/Preconditions/EffectControl/@Count" />
+                    <xsl:text> shader effects detected.  Shader effects may not be supported by your platform. If your platform doesn't support the effect then this feature will not work on your device.  Verify that the platform supports the effect.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="$project/Preconditions/UnknownControl/@Count &gt; 0">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Warning: </xsl:text>
+                    </b>
+                    <xsl:value-of select="$project/Preconditions/UnknownControl/@Count" />
+                    <xsl:text> unknown controls detected. Custom controls are not supported by this version of XAML for Windows Embedded.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="$project/Preconditions/MissingXClass/@Count &gt; 0">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Error: </xsl:text>
+                    </b>
+                    <xsl:text> the root element is missing the x:Class or xrpack:ClassResourceId attribute.  XRPack.exe requires a resource id for each XAML file.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="$project/Preconditions/UnsupportedDataBindingElement/@Count &gt; 0">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Error: </xsl:text>
+                    </b>
+                    <xsl:value-of select="$project/Preconditions/UnsupportedDataBindingElement/@Count" />
+                    <xsl:text> unsupported Binding elements detected.  Binding elements are not supported by this version of XAML for Windows Embedded.  Remove the unsupported control from the file.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="$project/Preconditions/UnsupportedBindingMarkup/@Count &gt; 0">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Error: </xsl:text>
+                    </b>
+                    <xsl:value-of select="$project/Preconditions/UnsupportedBindingMarkup/@Count" />
+                    <xsl:text> unsupported Binding markup extension attributes detected.  Binding markup extension attributes are not supported by this version of XAML for Windows Embedded.  Remove the unsupported attribute from the file.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="$project/Preconditions/UnsupportedDataContext/@Count &gt; 0">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Error: </xsl:text>
+                    </b>
+                    <xsl:value-of select="$project/Preconditions/UnsupportedDataContext/@Count" />
+                    <xsl:text> unsupported DataContext attributes detected.  DataContext markup extension attributes are not supported by this version of XAML for Windows Embedded.  Remove the unsupported attribute from the file.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="$project/Preconditions/UnsupportedDisplayMemberPath/@Count &gt; 0">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Error: </xsl:text>
+                    </b>
+                    <xsl:value-of select="$project/Preconditions/UnsupportedDisplayMemberPath/@Count" />
+                    <xsl:text> unsupported DisplayMemberPath attributes detected.  DisplayMemberPath attributes are not supported by this version of XAML for Windows Embedded.  Remove the unsupported attribute from the file.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="count($project/Preconditions/FileNameErrors/InvalidFileName)">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Error: </xsl:text>
+                    </b>
+                    <xsl:value-of select="count($project/Preconditions/FileNameErrors/InvalidFileName)" />
+                    <xsl:text>  File name errors detected.  The path contains spaces or other invalid characters.  Platform Builder projects cannot use paths that contain spaces.  Remove the spaces or other invalid characters from the path.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+              <xsl:if test="$project/Preconditions/OverloadedEventHandler/@Count &gt; 0">
+                <tr>
+                  <td>
+                    <b>
+                      <xsl:text>Error: </xsl:text>
+                    </b>
+                    <xsl:value-of select="$project/Preconditions/OverloadedEventHandler/@Count" />
+                    <xsl:text> event handlers with multiple argument types detected.  Event handlers cannot support multiple argument types in this version of XAML for Windows Embedded.  Remove or rename the event handler.</xsl:text>
+                  </td>
+                </tr>
+              </xsl:if>
+            </table>
+            <xsl:if test="count($project/Preconditions/FileNameErrors/InvalidFileName)">
+              <h2>Invalid File Names:</h2>
+              <table cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
+                <tr>
+                  <td nowrap="1" class="header">File</td>
+                  <td nowrap="1" class="header">Description</td>
+                </tr>
+                <xsl:for-each select="$project/Preconditions/FileNameErrors/InvalidFileName">
+                  <xsl:sort select="@FileName" />
+                  <tr class="row">
+                    <td class="content">
+                      <xsl:value-of select="@FileName" />
+                    </td>
+                    <td class="content">
+                      <xsl:value-of select="@Description" />
+                    </td>
+                  </tr>
+                </xsl:for-each>
+              </table>
+            </xsl:if>
+            <xsl:if test="$project/Preconditions/EmbeddedFontErrors/@Count &gt; 0">
+              <h2>
+                <xsl:value-of select="$project/Preconditions/@Name" />
+              </h2>
+              <table cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
+                <tr>
+                  <td nowrap="1" class="header">
+                    Embedded Font Filename
+                  </td>
+                </tr>
+                <xsl:for-each select="$project/Preconditions/EmbeddedFontErrors/BlendEmbeddedFont">
+                  <tr class="row">
+                    <td nowrap="1" class="content">
+                      <xsl:value-of select="@FontFile" />
+                    </td>
+                  </tr>
+                </xsl:for-each>
+              </table>
+            </xsl:if>
+            <xsl:for-each select="$project/Preconditions/XamlFile">
+              <xsl:if test="@HasErrors='true'">
+                <h2>
+                  <xsl:value-of select="@FileName" />
+                </h2>
+                <table cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
+                  <tr>
+                    <td nowrap="1" class="header">Line</td>
+                    <td nowrap="1" class="header">Warning Type</td>
+                    <td nowrap="1" class="header">Additional Information</td>
+                  </tr>
+                  <xsl:if test="@UnsupportedDefaultNamespace='true'">
+                    <tr class="row">
+                      <td class="content">
+                        <xsl:value-of select="@LineNumber" />
+                      </td>
+                      <td class="content">
+                        <xsl:if test="@UserControl='true'">
+                        Warning: The root UserControl is not in the required default namespace.
+                      </xsl:if>
+                        <xsl:if test="not(@UserControl='true')">
+                        Warning: The root control is in an unsupported namespace: <xsl:value-of select="@Namespace" />.
+                      </xsl:if>
+                      </td>
+                      <td class="content">
+                        <xsl:if test="@UserControl='true'">
+                        Native code files were not generated for this file.  UserControls must be declared with a default namespace of http://schemas.microsoft.com/winfx/2006/xaml/presentation
+                      </xsl:if>
+                        <xsl:if test="not(@UserControl='true')">
+                        Native code files were not generated for this file.  Use a root control that is from one of the following namespaces:
+                        <ul><li>http://schemas.microsoft.com/winfx/2006/xaml/presentation</li><li>http://schemas.microsoft.com/xps/2005/06</li><li>http://schemas.microsoft.com/client/2007</li><li>http://schemas.microsoft.com/client/2007/deployment</li><li>clr-namespace:System;assembly=mscorlib</li><li>clr-namespace:System.Windows;assembly=System.Windows</li></ul></xsl:if>
+                      </td>
+                    </tr>
+                  </xsl:if>
+                  <xsl:for-each select="UnknownControl">
+                    <tr class="row">
+                      <td class="content">
+                        <xsl:value-of select="@LineNumber" />
+                      </td>
+                      <td class="content">
+                      Warning:  unknown controls detected.  Custom controls are not supported by this version of XAML for Windows Embedded.
+                    </td>
+                      <td class="content">
+                      The generated project may not build.  Remove <xsl:value-of select="@Name" /> from the file or if it’s a custom control, manually register the control.
+                    </td>
+                    </tr>
+                  </xsl:for-each>
+                  <xsl:for-each select="MissingXClass">
+                    <tr class="row">
+                      <td class="content">
+                        <xsl:value-of select="@LineNumber" />
+                      </td>
+                      <td class="content">
+                      Error: XRPack.exe requires the root element to have either an x:Class or an xrpack:ClassResourceId attribute.
+                    </td>
+                      <td class="content">
+                      The generated project will not run.  The root element, <xsl:value-of select="@Name" />, needs an x:Class or an xrpack:ClassResourceId attribute defined.
+                    </td>
+                    </tr>
+                  </xsl:for-each>
+                  <xsl:for-each select="UnknownElement">
+                    <tr class="row">
+                      <td class="content">
+                        <xsl:value-of select="@LineNumber" />
+                      </td>
+                      <td class="content">
+                      Error: UserControl missing.
+                    </td>
+                      <td class="content">
+                      The generated project will not build.  The startup control must be a UserControl.
+                    </td>
+                    </tr>
+                  </xsl:for-each>
+                  <xsl:for-each select="MediaElement">
+                    <xsl:for-each select="MediaElementDetail">
+                      <tr class="row">
+                        <td class="content">
+                          <xsl:value-of select="@LineNumber" />
+                        </td>
+                        <td class="content">
+                        Warning: <xsl:value-of select="@Name" />  MediaElements are not supported by this version of XAML for Windows Embedded.
+                      </td>
+                        <td class="content">
+                        The generated project may not build or run.
+                      </td>
+                      </tr>
+                    </xsl:for-each>
+                  </xsl:for-each>
+                  <xsl:for-each select="EffectElement">
+                    <tr class="row">
+                      <td class="content">
+                        <xsl:value-of select="@LineNumber" />
+                      </td>
+                      <td class="content">
+                      Warning: <xsl:value-of select="@Name" /> may not be supported by your platform. If your platform doesn't support the shader effect then this feature will not work on your device.
+                    </td>
+                      <td class="content">
+                      The generated application may not run.  Verify that the platform supports the Effect.  The platform must support the Effect in order for it to work.
+                    </td>
+                    </tr>
+                  </xsl:for-each>
+                  <xsl:for-each select="BindingMarkup">
+                    <xsl:for-each select="BindingMarkupDetail">
+                      <tr class="row">
+                        <td class="content">
+                          <xsl:value-of select="@LineNumber" />
+                        </td>
+                        <td class="content">
+                        Error: Binding Markup attribute <xsl:value-of select="@Name" /> is not supported by this version of XAML for Windows Embedded.
+                      </td>
+                        <td class="content">
+                        The generated project will not build.  Remove the unsupported attribute from the file.
+                      </td>
+                      </tr>
+                    </xsl:for-each>
+                  </xsl:for-each>
+                  <xsl:for-each select="DataContext">
+                    <xsl:for-each select="DataContextDetail">
+                      <tr class="row">
+                        <td class="content">
+                          <xsl:value-of select="@LineNumber" />
+                        </td>
+                        <td class="content">
+                        Error: DataContext attribute <xsl:value-of select="@Name" /> is not supported by this version of XAML for Windows Embedded.
+                      </td>
+                        <td class="content">
+                        The generated project will not build.  Remove the unsupported attribute from the file.
+                      </td>
+                      </tr>
+                    </xsl:for-each>
+                  </xsl:for-each>
+                  <xsl:for-each select="DisplayMemberPath">
+                    <xsl:for-each select="DisplayMemberPathDetail">
+                      <tr class="row">
+                        <td class="content">
+                          <xsl:value-of select="@LineNumber" />
+                        </td>
+                        <td class="content">
+                        Error: DisplayMemberPath attribute <xsl:value-of select="@Name" /> is not supported by this version of XAML for Windows Embedded.
+                      </td>
+                        <td class="content">
+                        The generated project will not build.  Remove the unsupported attribute from the file.
+                      </td>
+                      </tr>
+                    </xsl:for-each>
+                  </xsl:for-each>
+                  <xsl:for-each select="OverloadedEventHandler">
+                    <tr class="row">
+                      <td class="content">
+                        <xsl:value-of select="@LineNumber" />
+                      </td>
+                      <td class="content">
+                        Error: event handlers with multiple argument types detected.  Event handlers cannot have multiple argument types in this version of XAML for Windows Embedded.
+                      </td>
+                      <td class="content">
+                        The generated project will not build.  Remove or rename the event handler: <xsl:value-of select="@Handler" />.
+                      </td>
+                    </tr>
+                  </xsl:for-each>
+                </table>
+              </xsl:if>
+            </xsl:for-each>
+          </xsl:if>
+          <h2>Element Use Statistics:</h2>
+          <table cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
+            <tr>
+              <td nowrap="1" class="header" align="right" style="padding-left:5px">Count</td>
+              <td nowrap="1" class="header">Item Type</td>
+            </tr>
+            <xsl:for-each select="$project/Statistics/ProjectSummaryStatistics/ElementSummaryStatistic">
+              <tr class="row">
+                <td class="numbercontent" align="right">
+                  <xsl:value-of select="@Count" />
+                </td>
+                <td>
+                  <xsl:value-of select="@Name" />
+                </td>
+              </tr>
+            </xsl:for-each>
+            <tr class="row">
+              <td class="numbercontent" align="right">
+                <xsl:value-of select="$project/Statistics/Paths/@Count" />
+              </td>
+              <td>
+                <xsl:text>Path</xsl:text>
+              </td>
+            </tr>
+            <tr class="row">
+              <td class="numbercontent" align="right">
+                <xsl:value-of select="$project/Statistics/Fonts/@Count" />
+              </td>
+              <td class="content">
+                <xsl:text>Font</xsl:text>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup
+    Condition="'$(XRPack_ToolBeforeTargets)' == '' and '$(XRPack_ToolAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <XRPack_ToolBeforeTargets>Midl</XRPack_ToolBeforeTargets>
+    <XRPack_ToolAfterTargets>CustomBuild</XRPack_ToolAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <XRPack_ToolDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(XRPack_ToolDependsOn)</XRPack_ToolDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <XRPack_Tool>
+      <CommandLineTemplate>"$(VSInstallDir)VC\VCWizards\WindowsEmbeddedXamlTools\XRPack.exe" "/Root=$(ProjectDir)" "/IntermediateFiles=$(OutDir)" "@%(FullPath)"</CommandLineTemplate>
+      <Outputs>%(Filename)Generated.h %(Filename)Generated.rc2</Outputs>
+      <ExecutionDescription>Generating RC2 file.</ExecutionDescription>
+    </XRPack_Tool>
+  </ItemDefinitionGroup>
+</Project>

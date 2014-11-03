@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sabre_audio_with_xaml", "sabre_audio_with_xaml\sabre_audio_with_xaml.vcxproj", "{C68C997C-D040-405A-863B-91BB23BF991A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|MS2013 = Debug|MS2013
+		Release|MS2013 = Release|MS2013
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C68C997C-D040-405A-863B-91BB23BF991A}.Debug|MS2013.ActiveCfg = Debug|MS2013
+		{C68C997C-D040-405A-863B-91BB23BF991A}.Debug|MS2013.Build.0 = Debug|MS2013
+		{C68C997C-D040-405A-863B-91BB23BF991A}.Debug|MS2013.Deploy.0 = Debug|MS2013
+		{C68C997C-D040-405A-863B-91BB23BF991A}.Release|MS2013.ActiveCfg = Release|MS2013
+		{C68C997C-D040-405A-863B-91BB23BF991A}.Release|MS2013.Build.0 = Release|MS2013
+		{C68C997C-D040-405A-863B-91BB23BF991A}.Release|MS2013.Deploy.0 = Release|MS2013
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project TemplateName="Application" OSVersion="Chelan" CreateSubprojectOnly="False">
+  <File Name="App.xaml" MD5Hash="1A854819608EADF2C9172B11F7FF67E7" />
+  <File Name="MainPage.xaml" MD5Hash="1A11E7256893EFB2B442D9DEEF3A8E90" />
+  <File Name="xaml_audio.csproj" MD5Hash="5423CB46281CDA7B15F89A939CC34BF9" />
+</Project>
